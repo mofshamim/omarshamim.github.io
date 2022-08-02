@@ -59,7 +59,8 @@ https://www.markdownguide.org/basic-syntax/
 ```
 
 # Image	
-<img src="image.png" alt="image" width="200"/>
+<img src="images/image.png" alt="image" width="200"/>
+
 ```html
 ![alt text](image.jpg)
 or 
@@ -91,6 +92,15 @@ or
 | Paragraph   | Text        | And more      |
 ```
 
+# Table of Contents
+- [Github](https://github.com/omarshamim)
+- [Heading](#heading)
+- [Task List](#task-list)
+```html
+- [Github](https://github.com/omarshamim)
+- [Heading](#heading)
+- [Task List](#task-list)
+```
 
 # Fenced Code Block [ ``` sign is used start and end] 
 ```
