@@ -424,7 +424,10 @@ T-Shirt
 Panjabi
 ```
 
-# Array Method: push
+# Array Method
+There ara many array methods. We will discuss step by step.
+
+## Array Method: push
 Element add into end of the array.
 ```js
     var names = ["Omar", "Faruque", "Shamim"]
@@ -441,9 +444,9 @@ Shamim
 Shakil
 ```
 
-# Array Method: unshift
-- unshift opposite of push
-- element add into start of the array
+## Array Method: unshift
+- Unshift opposite of push
+- Element add into start of the array
 ```js
     var names = ["Omar", "Faruque", "Shamim"]
     names.unshift("Shakil");
@@ -459,8 +462,8 @@ Faruque
 Shamim
 ```
 
-# Array Method: pop
-- element removes from end of the array
+## Array Method: pop
+- Element removes from end of the array
 ```js
     var names = ["Omar", "Faruque", "Shamim"]
     names.pop();
@@ -474,9 +477,9 @@ Omar
 Faruque
 ```
 
-# Array Method: shft
-- shift opposite of pop
-- element removes from start of the array
+## Array Method: shft
+- Shift opposite of pop
+- Element removes from start of the array
 ```js
         var names = ["Omar", "Faruque", "Shamim"]
         names.shift();
@@ -489,7 +492,7 @@ Faruque
 Shamim
 ```
 
-# Array Method: concat
+## Array Method: concat
 ```js
         var country1 = ["Bangladesh", "India"];
         var country2 = ["USA", "UK"];
@@ -500,7 +503,7 @@ Shamim
         ['Bangladesh', 'India', 'USA', 'UK']
 ```
 
-# Array Method: splice
+## Array Method: splice
 ```js
     var names = ["Omar", "Faruque", "Shamim"]
     names.splice(2, 0, "Shakil", "Sadia");
@@ -548,7 +551,7 @@ output:
 Omar
 ```
 
-# Array Method: slice
+## Array Method: slice
 - main array is not changed
 ```js
         var names = ["Omar", "Faruque", "Shamim"]
@@ -562,7 +565,7 @@ output:
 Shamim
 ```
 
-# Array Method: sort
+## Array Method: sort
 ```js
         var names = ["Omar", "Faruque", "Shamim"]
         var newNames = names.sort();
@@ -577,7 +580,7 @@ Shamim
 
 ```
 
-# Array Method: sort then reverse
+## Array Method: sort then reverse
 ```js
         var names = ["Omar", "Faruque", "Shamim"]
         var newNames = names.sort();
@@ -632,4 +635,385 @@ output:
 6
 5
 1
+```
+
+# Object
+```js
+        //Array
+        var items = [];
+
+        //1st Object
+        var item1 = {
+            Barcode: "77101",
+            ProductName: "Shirt",
+            CostPrice: 800,
+            SalesPrice: 990
+        }
+        //2nd Object
+        var item2 = {
+            Barcode: "77102",
+            ProductName: "T-Shirt",
+            CostPrice: 400,
+            SalesPrice: 490
+        }
+        items.push(item1);
+        items.push(item2);
+
+        for (var i = 0; i < items.length; i++) {
+            console.log(items[i].Barcode);
+        }
+
+output:
+77101
+77102
+
+```
+
+# Object create using constructor
+
+```js
+function Item(barcode, productName, costPrice, salesPrice) {
+    this.Barcode = barcode,
+        this.ProductName = productName,
+        this.CostPrice = costPrice,
+        this.SalesPrice = salesPrice,
+        this.display = function () {
+            console.log(this.ProductName)
+        }
+}
+
+
+var item1 = new Item("77101", "Shirt", 800, 990);
+var item2 = new Item("77102", "T-Shirt", 400, 490);
+
+var items = [];
+items.push(item1);
+items.push(item2);
+
+for (var i = 0; i < items.length; i++) {
+    items[i].display();
+}
+
+output:
+Shirt
+T-Shirt
+
+```
+
+# Math Object
+```js
+        console.log(Math.sqrt(25));
+        Output: 5
+        // sin(), cos(), tan() ...
+        console.log(Math.sin(25));
+        Output: -0.13235175009777303
+
+        console.log(Math.abs(-25));
+        Output: 25
+        console.log(Math.pow(2, 3));
+        Output: 8
+
+        console.log(Math.floor(2.4));
+        Output: 2
+        console.log(Math.ceil(2.4));
+        Output: 3
+        console.log(Math.round(2.4));
+        Output: 2
+
+        console.log(Math.max(2, 8));
+        Output: 8
+        console.log(Math.min(2, 8));
+        Output: 2
+
+
+        // returns value between 0 to 1 by default
+        console.log(Math.random());
+        Output: 0.9372866797353949
+        // returns value between 0 to 5 
+        console.log(Math.random() * 6);
+        Output: 4.852790846961605
+
+        // returns value between 0 to 5 integer value
+        console.log(Math.floor(Math.random() * 6));
+        Output: 5
+        // returns value between 1 to 5 integer value
+        console.log(Math.floor(Math.random() * 5) + 1);
+        Output: 4
+
+```
+
+# Date Object & Date Method
+```js
+        var date = new Date();
+        
+        console.log(date);
+        Output: Sat Jan 22 2022 19:38:39 GMT+0600 (Bangladesh Standard Time)
+
+        console.log(date.getFullYear());
+        Output: 2022
+
+        console.log(date.getMonth());
+        Output: 0
+
+        console.log(date.getDate());
+        Output: 22
+
+        //sunday = 0, Monday = 1
+        console.log(date.getDay());
+        Output: 6
+
+        console.log(date.getHours());
+        Output: 19
+
+```
+
+# DOM: Document Object Model
+- When a web page is loaded, the browser creates a Document Object Model of the page.
+- The HTML DOM model is constructed as a tree of Objects:
+
+```html
+<html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body> 
+    <div></div>
+     <h1></h1>
+</body>
+</html>
+```
+
+
+# Html tag change using Javascript
+
+## getElementById
+```js
+<h1 class="heading" id="headingId">1st Heading</h1>
+document.getElementById("headingId").innerHTML = "1st Heading Change!";
+
+Output: 1st Heading Change!
+```
+
+## getElementsByTagName
+```js
+    <h1 class="heading1">1st Heading</h1>
+    <h1 class="heading2">2nd Heading</h1>
+
+    document.getElementsByTagName("h1")
+    [1].innerHTML = "2nd Heading Change!";
+
+Output: 1st Heading Change!
+```
+
+## getElementsByClassName
+```js
+    <h1 class="heading1">1st Heading</h1>
+    <h1 class="heading2">2nd Heading</h1>
+
+    document.getElementsByClassName("heading1")
+    [0].innerHTML = "1st Heading Change!";
+
+Output: 1st Heading Change!
+```
+
+## Query Selector
+
+```js
+    <h1 id="hid">1st Heading</h1>
+    document.querySelector("#hid")
+        .innerHTML = "1st Heading Change!";
+
+    <h1 class="hclass">2nd Heading</h1>
+    document.querySelector(".hclass")
+        .innerHTML = "2nd Heading Change!";
+
+    <p>1st Paragramph</p>
+    document.querySelector("p")
+        .innerHTML = "1st Paragramph Change!";
+
+    <div class="myDiv">
+        <a href="#">Link</a>
+    </div>
+    document.querySelector(".myDiv a")
+        .innerHTML = "link Change!";
+
+
+    <h1> 1st Heading</h1>
+    <h1> 2nd Heading</h1>
+    document.querySelectorAll("h1")[1]
+        .innerHTML = "2nd Heading Change!";
+
+```
+
+## New Header Tag Add into Div: End Position
+```js
+    <div id="myDiv">
+        <h1>heading 1</h1>
+        <h1>heading 2</h1>
+    </div>
+
+var heading3 = document.createElement("h1");
+var text = document.createTextNode("heading 3");
+heading3.appendChild(text);
+
+var myDiv = document.getElementById("myDiv");
+myDiv.appendChild(heading3);
+
+output: 
+heading 1
+heading 2
+heading 3
+```
+
+## New Header Tag Add into Div : Start Position
+```js
+    <div id="myDiv">
+        <h1>heading 1</h1>
+        <h1>heading 2</h1>
+    </div>
+
+    var heading1 = document.getElementsByTagName("h1")[0];
+
+    var heading0 = document.createElement("h1");
+    var text = document.createTextNode("heading 0");
+    heading0.appendChild(text);
+
+    var myDiv = document.getElementById("myDiv");
+    myDiv.insertBefore(heading0, heading1);
+
+output: 
+heading 0
+heading 1
+heading 2
+
+```
+
+## Remove Header Tag from Div
+```js
+    <div id="myDiv">
+        <h1>heading 1</h1>
+        <h1>heading 2</h1>
+        <h1>heading 3</h1>
+    </div>
+
+var heading3 = document.getElementsByTagName("h1")[2];
+var myDiv = document.getElementById("myDiv");
+myDiv.removeChild(heading3);
+
+output: 
+heading 1
+heading 2
+
+```
+
+# CSS change using Javascript
+
+## css change using DOM
+```js
+    <a id="linkId" href="#">Visit Google</a>
+
+    var link = document.getElementById("linkId");
+    link.style.textDecoration = "none";
+    link.style.color = "red";
+    link.href = "https://www.google.com/"
+    link.target = "_blank"
+```
+
+## CSS Class Add/Remove
+```js
+   <h1 id="my-id" class="my-class">heading 1</h1>
+
+    document.getElementById("my-id").classList;
+
+    document.getElementById("my-id").classList.add("new-Class");
+    document.getElementById("my-id").classList;
+
+
+    document.getElementById("my-id").classList.remove("new-Class");
+    document.getElementById("my-id").classList;
+
+```
+
+
+
+
+
+# Event Handler  
+
+## Add Event Listener
+```js
+<button>Click Me</button>
+
+document.querySelector("button")
+    .addEventListener("click", myFunction);
+
+or
+ document.querySelector("button")
+    .addEventListener("mouseover", myFunction);
+
+or
+document.querySelector("button")
+    .addEventListener("mouseout", myFunction);
+
+function myFunction() {
+    alert("Hello Omar!")
+}
+```
+
+## Event Listener With Multiple Event
+```js
+    <button class="my-button">Button 1 </button>
+    <button class="my-button">Button 2 </button>
+
+    var len = document.querySelectorAll(".my-button").length;
+
+    for (var i = 0; i < len; i++) {
+        document.querySelectorAll(".my-button")
+        [i].addEventListener("click", myFunction);
+    }
+
+    function myFunction() {
+        alert(this.innerHTML + " is clicked")
+    }
+```
+
+# Key Press Event Listener
+```js
+    document.addEventListener("keypress", function () {
+        var text = event.key;
+        alert(text);
+    })
+```
+
+## onclick Event Listener
+```js
+<button onclick="alert('Hello Omar!')"> 
+    Click Me
+</button>
+```
+
+```js
+<button onclick="myMesage('Hello Omar!')"> 
+    Click Me
+</button>
+
+    function myMesage(msg) {
+        alert(msg);
+    }
+```
+
+## Audio play
+```js
+        var audio = new Audio("audio.mp3");
+        audio.play();
+        audio.pause();
+```
+
+## setTimeout
+```js
+     setTimeout(function () {
+            //wait
+    }, 1000)
 ```
