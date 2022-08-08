@@ -368,3 +368,268 @@ Positive
 [] : squre bracet
 <> : angle bracket
 ```
+
+
+
+# Array Declare
+There are many ways to declare array. We will discuss step by step.
+
+## 1st Process
+```js
+    var names = new Array(4);
+    names[0] = "Omar";
+    names[1] = "Faruque";
+    names[2] = "Shamim";
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
+output:
+Omar
+Faruque
+Shamim
+undefined
+undefined
+```
+
+## 2nd Process
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
+output:
+Omar
+Faruque
+Shamim
+```
+
+## 3rd Process: 2D Array
+```js
+    var items = [
+        ["Shirt", 990],
+        ["T-Shirt", 490],
+        ["Panjabi", 1500],
+    ];
+
+    for (var i = 0; i < items.length; i++) {
+        console.log(items[i][0]);
+    }
+
+output:
+Shirt
+T-Shirt
+Panjabi
+```
+
+# Array Method: push
+Element add into end of the array.
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    names.push("Shakil");
+
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
+output:
+Omar
+Faruque
+Shamim
+Shakil
+```
+
+# Array Method: unshift
+- unshift opposite of push
+- element add into start of the array
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    names.unshift("Shakil");
+
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
+output:
+Shakil
+Omar
+Faruque
+Shamim
+```
+
+# Array Method: pop
+- element removes from end of the array
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    names.pop();
+    
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
+output:
+Omar
+Faruque
+```
+
+# Array Method: shft
+- shift opposite of pop
+- element removes from start of the array
+```js
+        var names = ["Omar", "Faruque", "Shamim"]
+        names.shift();
+
+        for (var i = 0; i < names.length; i++) {
+            console.log(names[i]);
+        }
+output:
+Faruque  
+Shamim
+```
+
+# Array Method: concat
+```js
+        var country1 = ["Bangladesh", "India"];
+        var country2 = ["USA", "UK"];
+        var countries = country1.concat(country2);
+
+        console.log(countries);
+        output:
+        ['Bangladesh', 'India', 'USA', 'UK']
+```
+
+# Array Method: splice
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    names.splice(2, 0, "Shakil", "Sadia");
+    /*
+    names.splice(strat, 
+    number of remove item, list of item)
+    */
+
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }  
+
+output:
+Omar
+Faruque
+Shakil
+Sadia
+Shamim
+
+```
+
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    names.splice(1, 2, "Shakil", "Sadia");
+
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+output:
+Omar
+Shakil
+Sadia
+Shamim
+
+```
+
+```js
+    var names = ["Omar", "Faruque", "Shamim"]
+    names.splice(1, 2);
+
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+output:
+Omar
+```
+
+# Array Method: slice
+- main array is not changed
+```js
+        var names = ["Omar", "Faruque", "Shamim"]
+        var newNames = names.slice(2);
+
+        for (var i = 0; i < newNames.length; i++) {
+            console.log(newNames[i]);
+        }
+
+output:
+Shamim
+```
+
+# Array Method: sort
+```js
+        var names = ["Omar", "Faruque", "Shamim"]
+        var newNames = names.sort();
+
+        for (var i = 0; i < newNames.length; i++) {
+            console.log(newNames[i]);
+        }  
+output:
+Faruque
+Omar
+Shamim
+
+```
+
+# Array Method: sort then reverse
+```js
+        var names = ["Omar", "Faruque", "Shamim"]
+        var newNames = names.sort();
+        newNames.reverse();
+
+        for (var i = 0; i < newNames.length; i++) {
+            console.log(newNames[i]);
+        }  
+output:
+Shamim
+Omar
+Faruque
+```
+
+# Array Method: asc sort for number
+- we should use annonymous function
+- first function get 2 values 1 & 8.
+then find out the values (a-b) or (1-8) = -7.
+if values is negative, they will not exchange thier position othewise they will exchange their
+position.
+```js
+        var number = [1, 8, 5, 6, 20];
+        number.sort(function (a, b) {
+            return a - b;
+        })
+
+        for (var i = 0; i < number.length; i++) {
+            console.log(number[i]);
+        }
+output:
+1
+5
+6
+8
+20
+```
+
+# Array Method: reverse sort for number
+- we should use annonymous function
+```js
+        var number = [5, 8, 1, 6, 20];
+        number.sort(function (a, b) {
+            return b-a;
+        })
+
+        for (var i = 0; i < number.length; i++) {
+            console.log(number[i]);
+        }
+output:
+20
+8
+6
+5
+1
+```
