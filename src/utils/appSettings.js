@@ -1,6 +1,6 @@
 // Website related settings
 
 export const appSettings = {
-    googleTrackingID: "UA-174238252-2",
+    googleTrackingID: "UA-238779836-1",
 };
 
