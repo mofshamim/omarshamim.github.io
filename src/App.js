@@ -1,11 +1,15 @@
-import './App.css';
+import React, { useState } from "react";
+import Routing from "./Routing";
+import { themes } from "./utils/theme";
 
 function App() {
+
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
   return (
-    <div className="App">
-      <h1>Hello World </h1>
-      <h1>Omar's PortFolio!! </h1>
-    </div>
+    <>
+      <Routing theme={themes[theme]} setTheme={setTheme} />
+    </>
   );
 }
 
