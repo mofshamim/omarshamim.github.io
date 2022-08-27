@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
 
-class Contact extends Component {
+class OpenSource extends Component {
     render() {
         return (
             <>
                 <Header theme={this.props.theme} setTheme={this.props.setTheme} />
-                <h1>Contact Page</h1>
+                <h1>Open Source Page</h1>
                 {/* <Greeting theme={this.props.theme} />
           <Skills theme={this.props.theme} />
           <Footer theme={this.props.theme} />
@@ -16,5 +16,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
-
+export default OpenSource;
