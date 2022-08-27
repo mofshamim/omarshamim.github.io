@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ReactGA from 'react-ga';
 import Routing from "./Routing";
-import { themes } from "./utils/theme";
+import { ThemeProvider } from "styled-components";
+
 import { appSettings } from "./utils/appSettings";
+import { themes } from "./utils/theme";
+import { GlobalStyles } from "./utils/globalStyles";
+
 
 function App() {
 
@@ -13,12 +17,15 @@ function App() {
     }
   }, []);
 
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   return (
-    <>
-      <Routing theme={themes[theme]} setTheme={setTheme} />
-    </>
+    <ThemeProvider theme={themes[theme]}>
+      <>
+        <GlobalStyles />
+        <Routing theme={themes[theme]} setTheme={setTheme} />
+      </>
+    </ThemeProvider>
   );
 }
 

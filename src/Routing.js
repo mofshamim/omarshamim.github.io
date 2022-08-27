@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import Home from "./views/home/Home";
 import Education from "./views/education/Education";
@@ -10,7 +10,7 @@ import Contact from "./views/contact/Contact";
 export default function Routing(propss) {
     return (
         <>
-            <HashRouter basename="/">
+            <BrowserRouter basename="/">
                 <Routes>
                     <Route path='/' element={<Home theme={propss.theme} setTheme={propss.setTheme} />} />
                     <Route path='/home' element={<Home theme={propss.theme} setTheme={propss.setTheme} />} />
@@ -19,7 +19,7 @@ export default function Routing(propss) {
                     <Route path='/projects' element={<Projects theme={propss.theme} setTheme={propss.setTheme} />} />
                     <Route path='/contact' element={<Contact theme={propss.theme} setTheme={propss.setTheme} />} />
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         </>
     );
 }
