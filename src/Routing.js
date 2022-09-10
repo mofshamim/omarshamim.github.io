@@ -2,11 +2,9 @@ import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import Home from "./views/home/Home";
-import Education from "./views/education/Education";
-import Experience from "./views/experience/Experience";
-import Projects from "./views/projects/Projects";
-import OpenSource from "./views/opensource/OpenSource";
-import Contact from "./views/contact/Contact";
+import Portfolio from "./views/portfolio/Portfolio";
+import Articles from "./views/articles/Articles";
+
 
 export default function Routing(propss) {
     return (
@@ -15,11 +13,8 @@ export default function Routing(propss) {
                 <Routes>
                     <Route path='/' element={<Home theme={propss.theme} setTheme={propss.setTheme} />} />
                     <Route path='/home' element={<Home theme={propss.theme} setTheme={propss.setTheme} />} />
-                    <Route path='/education' element={<Education theme={propss.theme} setTheme={propss.setTheme} />} />
-                    <Route path='/experience' element={<Experience theme={propss.theme} setTheme={propss.setTheme} />} />
-                    <Route path='/projects' element={<Projects theme={propss.theme} setTheme={propss.setTheme} />} />
-                    <Route path='/opensource' element={<OpenSource theme={propss.theme} setTheme={propss.setTheme} />} />
-                    <Route path='/contact' element={<Contact theme={propss.theme} setTheme={propss.setTheme} />} />
+                    <Route path='/portfolio' element={<Portfolio theme={propss.theme} setTheme={propss.setTheme} />} />
+                    <Route path='/articles' element={<Articles theme={propss.theme} setTheme={propss.setTheme} />} />
                 </Routes>
             </BrowserRouter>
         </>

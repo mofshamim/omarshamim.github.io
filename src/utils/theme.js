@@ -1,7 +1,7 @@
 
 const lightTheme = {
     name: "light",
-    body: "#EDF9FE",
+    body: "#FFFFFF",
     text: "#001C55",
     highlight: "#A6E1FA",
     dark: "#00072D",
