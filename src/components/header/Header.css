@@ -1,20 +1,5 @@
 /* header */
 
-.header-font-size {
-    font-size: 1em;
-}
-
-.logo-container {
-    align-items: center;
-    background-color: #31363b;
-    border: 2px solid #4b5056;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin: 0 0.5rem 0 0;
-    padding: 0.4rem 0.5rem;
-}
-
 .logo-image {
     width: 30px;
     height: 30px;
@@ -22,10 +7,22 @@
     margin-right: 5px;
 }
 
-
-
 @media (max-width: 768px) and (min-width: 1px) {
     .logo-name {
         display: none;
     }
 }
+
+.nav-link {
+    font-weight: bold;
+}
+
+.theme-icon {
+    margin-top: 7px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+/* .github-link.active {
+    color: rgba(255, 255, 255, 0.55) !important;
+} */

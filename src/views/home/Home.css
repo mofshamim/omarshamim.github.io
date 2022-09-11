@@ -1,0 +1,22 @@
+.grettings-section {
+    margin-top: 3em !important;
+}
+
+
+.image-box {
+    width: 250px;
+}
+
+.image-programming {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    float: right;
+}
+
+.summary {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+}

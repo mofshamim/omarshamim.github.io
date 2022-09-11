@@ -5,7 +5,6 @@ import Home from "./views/home/Home";
 import Portfolio from "./views/portfolio/Portfolio";
 import Articles from "./views/articles/Articles";
 
-
 export default function Routing(propss) {
     return (
         <>
