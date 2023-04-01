@@ -1,10 +1,11 @@
 .grettings-section {
-    margin-top: 3em !important;
+    margin-top: 0em !important;
 }
 
 
-.image-box {
+.grettings-image-box {
     width: 250px;
+    margin-top: 1.5em !important;
 }
 
 .image-programming {
@@ -14,9 +15,13 @@
     float: right;
 }
 
-.summary {
+.grettings-summary {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 0;
     margin-top: 1.5rem;
+}
+
+.grettings-para {
+    margin-top: 1.0em !important;
 }
